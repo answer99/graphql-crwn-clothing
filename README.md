@@ -29,3 +29,17 @@ type Query {
   getCollectionsByTitle(title: String): Collection
 }
 ```
+
+### Local Cache
+#### data
+```
+data: {
+  cartHidden: true;
+}
+```
+#### Schema
+```
+extend type Mutation {
+  ToggleCartHidden: Boolean!
+}
+```
