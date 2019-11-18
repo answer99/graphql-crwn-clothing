@@ -34,12 +34,18 @@ type Query {
 #### data
 ```
 data: {
-  cartHidden: true;
+  cartHidden: true,
+  cartItems: [],
+  itemCount: 0
 }
 ```
 #### Schema
 ```
 extend type Mutation {
   ToggleCartHidden: Boolean!
+  AddItemToCart(item: Item): [Item]!
+}
+extend type Item {
+  quantity: Int
 }
 ```
